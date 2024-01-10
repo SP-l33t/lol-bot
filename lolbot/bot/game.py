@@ -247,7 +247,7 @@ class Game:
         for player in self.game_data['allPlayers']:
             if player['summonerName'] in self.game_data['activePlayer']['summonerName']:
                 self.is_dead = bool(player['isDead'])
-                self.buying_items = self.current_player['currentGold'] > 1300 and \
+                self.buying_items = self.current_player['currentGold'] > 2000 and \
                                     len(player['items']) < 7
 
         self.low_hp = 0.001 < self.current_player['championStats']['currentHealth'] / \
