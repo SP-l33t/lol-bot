@@ -35,8 +35,8 @@ class GameError(Exception):
 class Game:
     """Game class that handles the tasks needed to play/win a bot game of League of Legends"""
 
-    MINI_MAP_UNDER_TURRET = (0.8760, 0.8846)
-    MINI_MAP_CENTER_MID = (0.8981, 0.8674)
+    MINI_MAP_UNDER_TURRET = (0.8980, 0.8810)
+    MINI_MAP_CENTER_MID = (0.9150, 0.8610)
     MINI_MAP_ENEMY_NEXUS = (0.9628, 0.7852)
 
     ULT_DIRECTION = (0.7298, 0.2689)
