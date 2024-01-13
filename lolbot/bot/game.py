@@ -13,6 +13,7 @@ import pyautogui
 import requests
 
 from lolbot.common import utils
+from lolbot.common.config import ConfigRW
 
 
 class GameState(Enum):
@@ -34,10 +35,9 @@ class GameError(Exception):
 
 class Game:
     """Game class that handles the tasks needed to play/win a bot game of League of Legends"""
-
-    MINI_MAP_UNDER_TURRET = (0.8980, 0.8810)
-    MINI_MAP_CENTER_MID = (0.9180, 0.8570)
-    MINI_MAP_ENEMY_NEXUS = (0.9628, 0.7852)
+    MINI_MAP_UNDER_TURRET = tuple(ConfigRW().get_data('ally_mid_turret'))
+    MINI_MAP_CENTER_MID = tuple(ConfigRW().get_data('attack_mid_turret'))
+    MINI_MAP_ENEMY_NEXUS = tuple(ConfigRW().get_data('attack_nexus'))
 
     ULT_DIRECTION = (0.7298, 0.2689)
     CENTER_OF_SCREEN = (0.5, 0.5)
